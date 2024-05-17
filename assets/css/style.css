@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('./header.css');
+@import url('./banner.css');
+@import url('./footer.css');
+
+:root{
+    --font-kalam : "Kalam", cursive;
+    --font-josefin :"Josefin Sans", sans-serif;
+
+    --primary-color:#000;
+    --secondary-color:#fff;
+
+    --bg-light-color:#fff;
+    --bg-dark-color:#000;
+
+    --cultured:hsl(0, 0%, 93%);
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: var(--font-josefin) ;
+}
+
+body{
+    background-color: #fff;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style-type: none;
+}
+
+.icon,
+a,
+img,
+input,
+button,
+span,
+textarea,
+select{
+    display: block;
+}
+
+input{
+    width: 100%;
+}
+
+.icon{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.container{
+    padding: 0 15px;
+}
+
+
+
+
+
+
+
+
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1.5px);
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1500;
+    display: none;
+}
+
+.overlay.active{
+    display: block;
+}
+
+
+
+.large-size-window{
+    display: none;
+}
+@media screen and (min-width:600px){
+    .page-wrapper{
+        display: none;
+    }
+
+    body{
+        background-color: #7F187A;
+        color: #fff;
+    }
+
+    .large-size-window{
+        display: initial;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
